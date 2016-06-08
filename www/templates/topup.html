@@ -1,0 +1,72 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-balanced">
+    <h1 class="title">Top Up</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeTopUp()">Batal</button>
+    </div>
+  </ion-header-bar>
+<!-- <ion-view view-title="Top Up Saldo"> -->
+  <ion-content>
+    <form>
+      <div class="list">
+<!--         <label class="item item-input item-floating-label">
+          <span class="input-label">Username</span>
+          <input type="text" placeholder="Username" ng-model="topup.username">
+        </label> -->
+
+<!--         <label class="item item-input item-floating-label">
+          <span class="input-label">Alamat Lengkap</span>
+          <input type="text" placeholder="Alamat Lengkap" ng-model="topup.alamat">
+        </label> -->
+
+<!--         <label class="item item-input item-floating-label">
+          <span class="input-label">Nomor Telepon</span>
+          <input type="text" placeholder="Nomor Telepon" ng-model="topup.nomor">
+        </label> -->
+
+<!--         <label class="item item-input item-floating-label">
+          <span class="input-label">Nomor Rekening</span>
+          <input type="text" placeholder="Nomor Rekening" ng-model="topup.rekening">
+        </label> -->
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Atas Nama (a.n)</span>
+          <input type="text" placeholder="Atas Nama (a.n)" ng-model="topup.an">
+        </label>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Metode
+          </div>
+          <select ng-model="topup.metode">
+            <option value="Mandiri" >Transfer Mandiri</option>
+            <option value="BNI" >Transfer BNI</option>
+            <option value="BRI" >Transfer BRI</option>
+            <option value="BCA" >Transfer BCA</option>
+          </select>
+        </label>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Nominal
+          </div>
+          <select ng-model="topup.nominal">
+            <option value="25000" >Rp 25.000</option>
+            <option value="50000" >Rp 50.000</option>
+            <option value="75000" >Rp 75.000</option>
+            <option value="100000" >Rp 100.000</option>
+          </select>
+        </label>
+
+        <p style="text-align: justify; padding-top: 10px; padding-left: 15px; padding-right: 10px;">
+          Transfer ke Rekening BNI 094284938 a.n Ely Desyanawati. Setelah transfer silahkan lakukan konfirmasi dengan mengklik tombol Isi Ulang dibawah ini
+        </p>
+
+        <label class="item">
+          <button class="button button-block button-balanced" type="submit" ng-click="confirmTopUp()">Isi Ulang</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+<!-- </ion-view> -->
+</ion-modal-view>

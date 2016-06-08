@@ -1,0 +1,65 @@
+<ion-view view-title="Invoice">
+  <ion-content> 
+  <!-- {{invoices}} -->
+ <!--  <h4 style="text-align: center;">Pesanan Anda</h4> -->
+  	<div class="card">
+  		<div class="item item-divider">
+  			Data Anda
+  		</div>
+
+  	<div class="item item-text-wrap">
+		    <div class="row">
+			<div class="col col-25"><p>Nama</p></div>
+			<div class="col"><p>: {{invoices[0]['nama_lengkap']}}</p></div>
+  		</div>
+
+  		<div class="row">
+			<div class="col col-25"><p>Alamat</p></div>
+			<div class="col"><p>: {{invoices[0]['alamat']}}</p></div>
+  		</div>
+
+  		<!-- BIAYA DELIVERY -->
+		<div class="row">
+				<div class="col col-25"><p>No. Telp</p></div>
+				<div class="col"><p>: {{invoices[0]['no_telp']}}</p></div>
+	  	</div>
+  	</div>
+
+  	<div class="item item-divider">
+    	Detail Pesanan
+  	</div>
+  	
+  	<div class="item item-text-wrap">
+  		<div class="row" ng-repeat="invoice in invoices">
+			<div class="col col-50"><p>{{invoice.nama_makanan}}</p></div>
+			<div class="col"><p>{{invoice.jumlah}} x {{invoice.harga}}</p></div>
+			<div class="col"><p>{{invoice.total}}</p></div>
+  		</div>
+
+  		<!-- BIAYA DELIVERY -->
+		<div class="row">
+				<div class="col col-50"><p>Biaya Delivery</p></div>
+				<div class="col"><p></p></div>
+				<div class="col"><p>2000</p></div>
+	  	</div>
+	  	<!-- TOTAL -->
+	  	<div class="row">
+				<div class="col col-50"><p><b>TOTAL</b></p></div>
+				<div class="col"><p></p></div>
+				<div class="col"><p><b>{{invoices[0]['total_harga']}}</b></p></div>
+	  	</div>
+  	</div>
+</div>
+
+<!-- <label class="item"> -->
+	<!-- <button class="button button-block button-balanced" ng-click="cekStatus({{invoices[0]['id_transaksi']}})">Cek Status</button> -->
+<!-- </label> -->
+	<a class="button button-block button-balanced" href="#/menu/status/{{invoices[0]['id_transaksi']}}">Cek Status</a>
+
+	<p style="text-align:center">Berikan pendapat anda, isi 
+	<a href="#" onclick="window.open('https://docs.google.com/forms/d/1wtNcLY2UOWOEk3qJIuHIbnom8lLWE0guP7MU2hxEbVI/viewform', '_system', 'location=yes'); return false;">Kuisioner</a>
+	</p>
+
+	
+	</ion-content>
+ </ion-view>

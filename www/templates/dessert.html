@@ -1,0 +1,23 @@
+<ion-view view-title="Rumah Makan">
+  <ion-content>
+  	<ion-refresher 
+  		pulling-teks="lepas untuk memperbarui"
+  		on-refresh="showData()">
+  	</ion-refresher>
+<!--     <div class="list list-inset">    
+  		<label class="item item-input">
+  			<i class="icon ion-search placeholder-icon"></i>
+  				<input type="text" placeholder="Cari Makanan">
+  		</label>
+	</div> -->
+	<h4 style="padding-left: 10px;">Daftar Rumah Makan</h4>
+	<p style="padding-left: 10px;">Kategori: Dessert</p>
+	<div class="list responsive-md">
+		<ion-item class="item item-thumbnail-left" ng-repeat="dessert in desserts" type="item-text-wrap" href="#/menu/makanan/dessert/{{dessert.id_rm}}">
+			<img ng-src="{{dessert.gambar}}">
+			<h2>{{dessert.nama_rm}}</h2>
+			<p>{{dessert.alamat_rm}}</p>
+		</ion-item>
+	</div>
+  </ion-content>
+</ion-view>

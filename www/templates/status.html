@@ -1,0 +1,35 @@
+<ion-view view-title="Status Pesanan">
+  <ion-content>
+  <!-- mulai -->
+  <ion-refresher
+    pulling-text="lepas untuk memperbarui"
+    on-refresh="showData()">
+  </ion-refresher>
+  <!-- {{transaksis}} -->
+  <!-- <ion-item class="" ng-repeat="transaksi in transaksis"> -->
+    <div class="card" ng-repeat="transaksi in transaksis">
+    	<ion-list>
+        <ion-item>
+          <div class="row">
+          <div class="col"><p>Status</p></div>
+          <div class="col"><p style="color:green;font-size:12pt;">: <b>{{transaksi.status_pesanan}}</b></p></div>
+          </div>
+          <div class="row">
+          <div class="col"><p>Rumah Makan</p></div>
+          <div class="col"><p>: {{transaksi.nama_rm}}</p></div>
+          </div>
+          <div class="row">
+          <div class="col"><p>Total Bayar</p></div>
+          <div class="col"><p>: Rp {{transaksi.total_harga}}</p></div>
+          </div>
+            <a class="button button-block button-royal" href="#/menu/invoice/{{transaksi.id_transaksi}}">Invoice</a>
+        </ion-item>
+    	</ion-list>
+    	</div>
+  <!-- </ion-item> -->
+<!-- <label class="item">
+  <button class="button button-block button-balanced" ng-click="back()">Go Home</button>
+</label> -->
+  <a class="button button-block button-balanced" href="#/menu/home">Go Home</a>
+  </ion-content>
+</ion-view>

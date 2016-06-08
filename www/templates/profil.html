@@ -1,0 +1,44 @@
+<ion-view view-title="Profil Saya">
+  <ion-content>
+  	<div id="content" style="position: relative;">
+  		<div id="profile-image">
+  			<img src="img/saya2.jpg" style="width:30%; display:block; margin-left: auto; margin-right:auto; margin-top: 20px;">
+  			<h4 style="text-align: center;">{{profils[0]['nama_lengkap']}}</h3>
+  		</div>
+
+  		<ion-list ng-repeat="profil in profils">
+  			<div class="item item-divider">
+  				Profil
+  			</div>
+  			<ion-item>
+	  			<div class="row">
+					<div class="col"><p>Nama</p></div>
+					<div class="col col-50"><p>{{profil.nama_lengkap}}</p></div>
+	  			</div>
+	  			<div class="row">
+					<div class="col"><p>Alamat</p></div>
+					<div class="col col-50"><p>{{profil.alamat}}</p></div>
+	  			</div>
+	  			<div class="row">
+					<div class="col"><p>No.Telp</p></div>
+					<div class="col col-50"><p>{{profil.no_telp}}</p></div>
+	  			</div>
+  			</ion-item>
+  			<div class="item item-divider">
+  				Info Saldo
+  			</div>
+  			<ion-item>
+  				<div class="row">
+					<div class="col"><p>Saldo Anda</p></div>
+					<div class="col col-50"><p>Rp. {{profil.saldo}}</p></div>
+	  			</div> 
+  			</ion-item>
+  		</ion-list>
+    
+      <label class="item">
+          <button class="button button-block button-balanced" ng-click="logOut()">Log Out</button>
+      </label>
+  	</div>
+
+  </ion-content>
+</ion-view>

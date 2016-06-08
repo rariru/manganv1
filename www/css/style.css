@@ -1,0 +1,7 @@
+/* Empty. Add your own CSS if you like */
+.spinner svg {
+  width: 64px;
+  height: 64px;
+  stroke: #ff9976;
+  fill: #ff9976;
+}

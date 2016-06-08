@@ -1,0 +1,43 @@
+<ion-view view-title="Buat Akun">
+  <ion-header-bar class="bar-balanced">
+    <h1 class="title">Buat Akun</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="close()">Batal</button>
+    </div>
+  </ion-header-bar>
+  
+  <ion-content>
+    <form>
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Nama Lengkap</span>
+          <input type="text" placeholder="Nama Lengkap" ng-model="dataRegister.nama_lengkap">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Alamat Kos</span>
+          <input type="text" placeholder="Alamat pengiriman makanan" ng-model="dataRegister.alamat">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Nomor Telepon</span>
+          <input type="text" placeholder="Nomor Telepon" ng-model="dataRegister.no_telp">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Username</span>
+          <input type="text" placeholder="Username" ng-model="dataRegister.username">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="dataRegister.password">
+        </label>
+
+        <label class="item">
+          <button class="button button-block button-balanced" type="submit" ng-click="register()" >Daftar</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

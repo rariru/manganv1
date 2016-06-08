@@ -1,0 +1,32 @@
+<ion-view view-title="Menu Makanan">
+  <ion-content>
+	<h4 style="padding-left: 10px;">Daftar Menu Makanan</h4>
+	<p style="padding-left: 10px;">Rumah Makan: {{menus[0]['nama_rm']}}</p>
+	<ul class="list">
+		<li class="item item-thumbnail-left" ng-repeat="menu in menus">
+			<img ng-src="{{menu.gambar}}">
+			{{menu.nama_makanan}}</br>
+			<p style="color: #ff9976;">Harga: Rp {{menu.harga}}</p>
+			<p>{{menu.keterangan}}</p>
+			<label class="checkbox" style="float:right; margin-top:-20px;">
+				<input type="checkbox" ng-model="menu.pilih" ng-true-value="'checked'">
+			</label>
+			<p>Jumlah Pesan: 
+			<select style="height: 30px; width: 40px;" ng-model="menu.kategori">
+				<option value="0" ng-selected="true">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			</p>
+			<br>
+		</li>
+	</ul>
+	<ion-checkbox ng-model="pembayaran.status">Bayar dengan saldo</ion-checkbox>
+	<label class="item">
+      	<button class="button button-block button-balanced" type="submit" ng-click="Order()">Order</button>
+     </label>
+  </ion-content>
+</ion-view>
